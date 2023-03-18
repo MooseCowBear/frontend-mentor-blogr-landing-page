@@ -18,55 +18,60 @@
 </head>
 <body>
   <header>
-    <div class="header__left">
-      <img src="./images/logo.svg" alt="blogr logo">
-      <nav>
-        <div class="nav__section">
-          <div class="nav__section-header">
-            <a href="#">Product</a>
-            <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
+    <!-- <picture class="background">
+      <source media="(max-width: 620px)" srcset="./images/bg-pattern-intro-mobile">
+      <img src="./images/bg-pattern-intro-desktop.svg">
+    </picture> -->
+    <div class="header__top">
+      <div class="header__left">
+        <img src="./images/logo.svg" alt="blogr logo">
+        <nav>
+          <div class="nav__section">
+            <div class="nav__section-header">
+              <a href="#">Product</a>
+              <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
+            </div>
+            <div class="nav__dropdown">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
           </div>
-          <div class="nav__dropdown">
-            <a href="#">Overview</a>
-            <a href="#">Pricing</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Features</a>
-            <a href="#">Integrations</a>
+          <div class="nav__section">
+            <div class="nav__section-header">
+              <a href="#">Company</a>
+              <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
+            </div>
+            <div class="nav__dropdown">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
           </div>
-        </div>
-        <div class="nav__section">
-          <div class="nav__section-header">
-            <a href="#">Company</a>
-            <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
+          <div class="nav__section">
+            <div class="nav__section-header">
+              <a href="#">Connect</a>
+              <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
+            </div>
+            <div class="nav__dropdown">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
           </div>
-          <div class="nav__dropdown">
-            <a href="#">About</a>
-            <a href="#">Team</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-          </div>
-        </div>
-        <div class="nav__section">
-          <div class="nav__section-header">
-            <a href="#">Connect</a>
-            <img src="./images/icon-arrow-light.svg" alt="expand menu arrow">
-          </div>
-          <div class="nav__dropdown">
-            <a href="#">Contact</a>
-            <a href="#">Newsletter</a>
-            <a href="#">LinkedIn</a>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+      <div class="header__right-desktop">
+        <a href="#">Login</a>
+        <button class="button-solid">Sign Up</button>
+      </div>
+      <div class="header__right-mobile">
+        <img src="./images/icon-hamburger.svg" alt="menu open hamburger">
+      </div>
     </div>
-    <div class="header__right-desktop">
-      <a href="#">Login</a>
-      <button class="button-solid">Sign Up</button>
-    </div>
-    <div class="header__right-mobile">
-      <img src="./images/icon-hamburger.svg" alt="menu open hamburger">
-    </div>
-
     <div class="header__main">
       <div class="text"> <!-- spacing between h#s and ps is consistent so all one wrapper tag -->
         <h1 class="extra-large">A modern publishing platform</h1>
@@ -80,10 +85,12 @@
   </header>
   <main>
     <section class="one">
-      <picture>
-        <source media="(max-width: 620px)" srcset="./images/illustration-editor-mobile.svg">
-        <img src="./images/illustration-editor-desktop.svg" alt="computer screen illustration">
-      </picture>
+      <div class="picture__container">
+        <picture>
+          <source media="(max-width: 620px)" srcset="./images/illustration-editor-mobile.svg">
+          <img src="./images/illustration-editor-desktop.svg" alt="computer screen illustration">
+        </picture>
+      </div>
       <h2 class="large">Designed for the future</h2>
       <div class="section__text-wrapper">
         <div class="text">
@@ -101,7 +108,9 @@
       </div>
     </section>
     <section class="two">
-      <img src="./images/illustration-phones.svg" alt="phone illustration">
+      <div class="picture__container">
+        <img src="./images/illustration-phones.svg" alt="phone illustration">
+      </div>
       <div class="text">
         <h2 class="large">State of the Art Infrastructure</h2>
         <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
@@ -109,10 +118,12 @@
       </div>
     </section>
     <section class="three">
-      <picture>
-        <source media="(max-width: 620px)" srcset="./images/illustration-laptop-mobile.svg">
-        <img src="./images/illustration-laptop-desktop.svg" alt="laptop illustration">
-      </picture>
+      <div class="picture__container">
+        <picture>
+          <source media="(max-width: 620px)" srcset="./images/illustration-laptop-mobile.svg">
+          <img src="./images/illustration-laptop-desktop.svg" alt="laptop illustration">
+        </picture>
+      </div>
       <div class="section__text-wrapper">
         <div class="text">
           <h3 class="small">Free, open, simple</h3>
@@ -129,32 +140,34 @@
     </section>
   </main>
   <footer>
-    <img src="./images/logo.svg" alt="blogr logo">
-    <div class="footer__category">
-      <h2 class="extra-small">Product</h2>
-      <div class="footer__links">
-        <a href="#">Overview</a>
-        <a href="#">Pricing</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Features</a>
-        <a href="#">Integrations</a>
+    <div class="footer__content">
+      <img src="./images/logo.svg" alt="blogr logo">
+      <div class="footer__category">
+        <h2 class="extra-small">Product</h2>
+        <div class="footer__links">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
       </div>
-    </div>
-    <div class="footer__category">
-      <h2 class="extra-small">Company</h2>
-      <div class="footer__links">
-        <a href="#">About</a>
-        <a href="#">Team</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
+      <div class="footer__category">
+        <h2 class="extra-small">Company</h2>
+        <div class="footer__links">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
       </div>
-    </div>
-    <div class="footer__category">
-      <h2 class="extra-small">Connect</h2>
-      <div class="footer__links">
-        <a href="#">Contact</a>
-        <a href="#">Newsletter</a>
-        <a href="#">LinkedIn</a>
+      <div class="footer__category">
+        <h2 class="extra-small">Connect</h2>
+        <div class="footer__links">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
       </div>
     </div>
     <div class="attribution">
