@@ -328,6 +328,16 @@ button:hover {
   cursor: pointer;
 }
 
+.button-solid:hover, .button-solid:focus {
+  background-color: hsla(0, 0%, 100%, 0.4);
+  color: var(--neutral-100);
+}
+
+.button-transparent:hover, .button-transparent:focus {
+  background-color: var(--neutral-100);
+  color: var(--primary-1);
+}
+
 a:hover:not(.dropdown-link) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -342,7 +352,7 @@ a.dropdown-link:hover {
 }
 
 .nav__dropdown {
-  display: flex; /* with js add class */
+  display: none; /* with js add class "show" here and to section header*/
   flex-direction: column;
   gap: 0.5em;
   width: 8rem;
@@ -351,7 +361,11 @@ a.dropdown-link:hover {
   padding: 1.3em;
   border-radius: 0.3em;
   transform: translateY(10px);
-  /* need box shaddow */
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav__dropdown.show {
+  display: flex;
 }
 
 .nav__dropdown .dropdown-link {
@@ -359,4 +373,8 @@ a.dropdown-link:hover {
   font-size: 0.7em;
   color: var(--neutral-400);
   font-family: "Ubuntu", sans-serif;
+}
+
+.nav__section-header.show > img {
+  transform: rotate(180deg);
 }
