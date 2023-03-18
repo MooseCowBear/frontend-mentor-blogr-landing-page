@@ -1,0 +1,78 @@
+:root {
+  --primary-1: hsl(356, 100%, 66%);
+  --primary-2: hsl(355, 100%, 74%);
+  --primary-3: hsl(208, 49%, 24%);
+
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(240, 2%, 79%);
+  --neutral-300:  hsl(207, 13%, 34%);
+  --neutral-400: hsl(240, 10%, 16%);
+
+  --gradient-accent: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  --gradient-neutral: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p, 
+section,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end reset */
+
+body {
+  font-family: "Overpass", serif; /*headings, "Ubuntu" for paragraphs */
+}
+
+.header__right-mobile { /*temp*/
+  display: none;
+}
