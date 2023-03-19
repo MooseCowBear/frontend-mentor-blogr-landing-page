@@ -30,8 +30,11 @@ let windowWidth = window.innerWidth;
 //add window resize listener, close mobile menu (in case it was open)
 window.addEventListener("resize", () => {
   if (window.innerWidth > 620 && windowWidth <= 620) {
-    console.log("moved from mobile to desktop");
+    closeDropdowns(); 
     closeMenu();
+  } //close desktop dropdowns if switch to mobile layout
+  else if (window.innerWidth <=620 && windowWidth > 620){
+    closeDropdowns();
   }
   windowWidth = window.innerWidth;
 })
@@ -52,3 +55,11 @@ navBar.addEventListener("click", (event) => {
     dropdown.classList.toggle("show");
   }
 });
+
+
+function closeDropdowns() {
+  const shown = document.getElementsByClassName("show"); 
+  while (shown.length) {
+    shown[0].classList.remove("show");
+  }
+}
