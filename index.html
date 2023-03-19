@@ -18,10 +18,6 @@
 </head>
 <body>
   <header>
-    <!-- <picture class="background">
-      <source media="(max-width: 620px)" srcset="./images/bg-pattern-intro-mobile">
-      <img src="./images/bg-pattern-intro-desktop.svg">
-    </picture> -->
     <div class="header__top">
       <div class="header__left">
         <img src="./images/logo.svg" alt="blogr logo">
@@ -69,11 +65,56 @@
         <button class="button-solid">Sign Up</button>
       </div>
       <div class="header__right-mobile">
-        <img src="./images/icon-hamburger.svg" alt="menu open hamburger">
+        <img class="mobile-menu-open" src="./images/icon-hamburger.svg" alt="menu open hamburger">
+        <img class="mobile-menu-close" src="./images/icon-close.svg" alt="close icon">
+      </div>
+      <div class="mobile-menu"> <!-- relative to header__top -->
+        <div class="mobile-menu__dropdown-wrapper">
+          <div class="mobile-menu__section">
+            <div class="mobile-menu__section-header">
+              <a href="#">Product</a>
+              <img src="./images/icon-arrow-dark.svg" alt="expand menu arrow">
+            </div>
+            <div class="mobile-menu__dropdown">
+              <a class="dropdown-link" href="#">Overview</a>
+              <a class="dropdown-link" href="#">Pricing</a>
+              <a class="dropdown-link" href="#">Marketplace</a>
+              <a class="dropdown-link" href="#">Features</a>
+              <a class="dropdown-link" href="#">Integrations</a>
+            </div>
+          </div>
+          <div class="mobile-menu__section">
+            <div class="mobile-menu__section-header">
+              <a href="#">Company</a>
+              <img src="./images/icon-arrow-dark.svg" alt="expand menu arrow">
+            </div>
+            <div class="mobile-menu__dropdown">
+              <a class="dropdown-link" href="#">About</a>
+              <a class="dropdown-link" href="#">Team</a>
+              <a class="dropdown-link" href="#">Blog</a>
+              <a class="dropdown-link" href="#">Careers</a>
+            </div>
+          </div>
+          <div class="mobile-menu__section">
+            <div class="mobile-menu__section-header">
+              <a href="#">Connect</a>
+              <img src="./images/icon-arrow-dark.svg" alt="expand menu arrow">
+            </div>
+            <div class="mobile-menu__dropdown">
+              <a class="dropdown-link" href="#">Contact</a>
+              <a class="dropdown-link" href="#">Newsletter</a>
+              <a class="dropdown-link" href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__button-wrapper">
+          <a class="mobile-menu__link" href="#">Login</a>
+        <button class="button-gradient">Sign Up</button>
+        </div>
       </div>
     </div>
     <div class="header__main">
-      <div class="text"> <!-- spacing between h#s and ps is consistent so all one wrapper tag -->
+      <div class="text">
         <h1 class="extra-large">A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
       </div>
