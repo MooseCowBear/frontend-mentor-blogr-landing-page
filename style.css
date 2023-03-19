@@ -453,9 +453,14 @@ a.dropdown-link:hover {
   padding: 1em;
 }
 
-.mobile-menu__dropdown.selected {
+.mobile-menu__dropdown.show {
   display: flex;
 }
+
+.mobile-menu__section-header.show > img {
+  transform: rotate(180deg);
+}
+
 
 /* need to flip the arrow on selected items */
 
