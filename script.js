@@ -1,3 +1,5 @@
+const BREAKPOINT = 620;
+
 //functionality for mobile menu
 const mobileMenuOpen = document.querySelector(".mobile-menu-open");
 const mobileMenuClose = document.querySelector(".mobile-menu-close");
@@ -29,11 +31,11 @@ mobileDropdownWrapper.addEventListener("click", (event) => {
 let windowWidth = window.innerWidth;
 //add window resize listener, close mobile menu (in case it was open)
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 620 && windowWidth <= 620) {
+  if (window.innerWidth > BREAKPOINT && windowWidth <= BREAKPOINT) {
     closeDropdowns(); 
     closeMenu();
   } //close desktop dropdowns if switch to mobile layout
-  else if (window.innerWidth <=620 && windowWidth > 620){
+  else if (window.innerWidth <= BREAKPOINT && windowWidth > BREAKPOINT){
     closeDropdowns();
   }
   windowWidth = window.innerWidth;
