@@ -99,8 +99,6 @@ header {
   gap: 2em;
   align-items: center;
   color: var(--neutral-100);
-
-  overflow: hidden;
 }
 
 header a {
@@ -116,23 +114,23 @@ header a {
 }
 
 .header__left {
-  display: flex;
+  display: flex; /* flex */
   align-items: center;
   gap: 5vw;
 }
 
 .header__right-desktop {
-  display: flex;
+  display: none; /* flex */
   align-items: center;
   gap: 1em;
 }
 
 .header__right-mobile { 
-  display: none;
+  display: block;
 }
 
 nav {
-  display: flex;
+  display: none; /* flex */
   gap: 1em;
 }
 
@@ -388,6 +386,88 @@ a.dropdown-link:hover {
   transform: rotate(180deg);
 }
 
+/* mobile menu */
+.header__top {
+  position: relative;
+}
+
+.mobile-menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-color: var(--neutral-100);
+  border-radius: 0.2em;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 120%;
+  /* needs box shadow */
+  z-index: 1;
+}
+
+.mobile-menu a {
+  color: var(--neutral-300);
+}
+
+.mobile-menu__dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.mobile-menu__section-header {
+  display: flex;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.mobile-menu__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.mobile-menu__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+  border-top: 2px solid hsl(240, 2%, 95%);
+}
+
+.mobile-menu__link {
+  margin-top: 1em;
+}
+
+.mobile-menu__dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: hsl(240, 2%, 95%); 
+  border-radius: 0.2em;
+  padding: 1em;
+}
+
+.mobile-menu__dropdown.selected {
+  display: flex;
+}
+
+/* need to flip the arrow on selected items */
+
+.button-gradient {
+  background: var(--gradient-accent);
+  color: var(--neutral-100);
+}
+
+.mobile-menu-close {
+  display: none; /* block when menu is open */
+}
+
 @media only screen and (max-width: 620px){
   header {
     background-size: 350%;
@@ -422,10 +502,11 @@ a.dropdown-link:hover {
   
   .one picture {
     position: absolute;
-    left: -50%;
-    top: -50%;
+    left: 10%; /* getting good position for one size, screws up others */
+    top: 0%;
     width: 80vw;
-    transform: translate(33%, 50%); 
+  
+    transform: translate(-10%, 0); 
   }
 
   .one > .section__text-wrapper {
