@@ -42,4 +42,13 @@ function closeMenu() {
   mobileMenu.style.display = "none";
 }
 //functionality for desktop nav bar dropdowns 
-
+const navBar = document.querySelector("nav");
+navBar.addEventListener("click", (event) => {
+  if (event.target.tagName === "A") {
+    const parent = event.target.parentNode;
+    const arrow = parent.querySelector("img");
+    arrow.classList.toggle("show");
+    const dropdown = parent.parentNode.querySelector(".nav__dropdown");
+    dropdown.classList.toggle("show");
+  }
+});
