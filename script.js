@@ -15,3 +15,14 @@ mobileMenuClose.addEventListener("click", () => {
   mobileMenuOpen.style.display = "block";
   mobileMenu.style.display = "none";
 });
+
+const mobileDropdownWrapper = document.querySelector(".mobile-menu__dropdown-wrapper");
+mobileDropdownWrapper.addEventListener("click", (event) => {
+  if (event.target.tagName === "A") {
+    const parentDiv = event.target.parentNode;
+    const arrow = parentDiv.querySelector("img");
+    arrow.classList.toggle("show");
+    const dropdown = parentDiv.parentNode.querySelector(".mobile-menu__dropdown");
+    dropdown.classList.toggle("show");
+  }
+});
