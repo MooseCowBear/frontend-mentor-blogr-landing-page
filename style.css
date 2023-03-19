@@ -79,6 +79,11 @@ body {
 
 a {
   text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.text {
+  letter-spacing: 1px;
 }
 
 header {
@@ -87,13 +92,15 @@ header {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 50%;
-  border-radius: 0 0 0 3rem;
+  border-radius: 0 0 0 5rem;
   padding: 3rem var(--padding);
   display: flex;
   flex-direction: column;
   gap: 2em;
   align-items: center;
   color: var(--neutral-100);
+
+  overflow: hidden;
 }
 
 header a {
@@ -209,7 +216,6 @@ main {
 .one > .picture__container {
   grid-column: 2;
   grid-row: 2;
-  border: 1px solid blue;
   position: relative;
 }
 
@@ -222,7 +228,6 @@ main {
 .one > .section__text-wrapper {
   grid-column: 1;
   grid-row: 2;
-  border: 1px solid blue;
 }
 
 .section__text-wrapper, .text {
@@ -237,6 +242,10 @@ main {
 .text {
   gap: 1em;
   line-height: 1.8;
+}
+
+.text .large, .text .small {
+  line-height: 1.2;
 }
 
 .two {
@@ -316,6 +325,7 @@ footer {
 .extra-small {
   font-size: 0.8em;
   color: var(--neutral-100);
+  font-family: "Ubuntu", sans-serif;
 }
 
 footer a {
@@ -372,9 +382,144 @@ a.dropdown-link:hover {
   font-weight: 400;
   font-size: 0.7em;
   color: var(--neutral-400);
-  font-family: "Ubuntu", sans-serif;
 }
 
 .nav__section-header.show > img {
   transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 620px){
+  header {
+    background-size: 350%;
+    background-position: 35% 40%;
+    border-radius: 0 0 0 5rem;
+    padding: 4rem var(--padding) 6rem var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .header__main {
+    gap: 3em;
+  }
+
+  .one {
+    grid-template-columns: 1fr;
+    gap: 0; /* without resetting this, the grid items were shifted to the left */
+    row-gap: 4em; 
+    padding: var(--padding);
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .one > .picture__container {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    border: 1px solid blue;
+    height: 18rem;
+  }
+  
+  .one picture {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 80vw;
+    transform: translate(33%, 50%); 
+  }
+
+  .one > .section__text-wrapper {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    border: 1px solid blue;
+    margin-top: 5rem;
+  }
+
+  .one > .large {
+    padding: 0; 
+    border: 1px solid blue;
+  }
+
+  .two {
+    background-position: 50% 135%;
+    grid-template-columns: 1fr;
+    gap: var(--padding);
+    border-radius: 0 5rem 0 5rem;
+    margin-top: 10rem;
+  }
+  
+  .two > .picture__container {
+    position: relative;
+    height: 5rem; 
+    border: 1px solid pink;
+  }
+  
+  .two img {
+    position: absolute;
+    transform: translate(0%, -40%);
+  }
+  
+  .two .text {
+    padding: calc(3 * var(--padding)) var(--padding); 
+    text-align: center;
+    letter-spacing: 1px; /* should this be on all text?? */
+  }
+
+  .three {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5em;
+    padding: calc(2 * var(--padding)) var(--padding);
+    text-align: center;
+  }
+  
+  .three > .picture__container {
+    border: 1px solid blue;
+    height: 10rem;
+    position: relative;
+  }
+  
+  .three picture {
+    position: absolute;
+    width: 90vw;
+    transform: translate(-33.5%, -10%);
+  }
+
+  .three .section__text-wrapper {
+    margin-top: 5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem var(--padding) var(--padding) var(--padding);
+    border-radius: 0 5rem 0 0;
+  }
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .footer__links {
+    gap: 0.3em;
+  }
+
+  .extra-large {
+    font-size: 2.1em;
+    line-height: 1;
+  }
+  
+  .large { 
+    font-size: 1.8em; 
+  }
+  
+  .small {
+    font-size: 1.6em;
+  }
 }
