@@ -20,11 +20,8 @@ mobileMenuClose.addEventListener("click", () => {
 const mobileDropdownWrapper = document.querySelector(".mobile-menu__dropdown-wrapper");
 mobileDropdownWrapper.addEventListener("click", (event) => {
   if (event.target.tagName === "A") {
-    const parentDiv = event.target.parentNode;
-    const arrow = parentDiv.querySelector("img");
-    arrow.classList.toggle("show");
-    const dropdown = parentDiv.parentNode.querySelector(".mobile-menu__dropdown");
-    dropdown.classList.toggle("show");
+    const parent = event.target.parentNode;
+    openDropdown(parent, true);
   }
 });
 
@@ -51,12 +48,17 @@ const navBar = document.querySelector("nav");
 navBar.addEventListener("click", (event) => {
   if (event.target.tagName === "A") {
     const parent = event.target.parentNode;
-    const arrow = parent.querySelector("img");
-    arrow.classList.toggle("show");
-    const dropdown = parent.parentNode.querySelector(".nav__dropdown");
-    dropdown.classList.toggle("show");
+    openDropdown(parent);
   }
 });
+
+function openDropdown(parent, mobile=false){
+  const dropdownClass = mobile? ".mobile-menu__dropdown" : ".nav__dropdown";
+  const arrow = parent.querySelector("img");
+  arrow.classList.toggle("show");
+  const dropdown = parent.parentNode.querySelector(dropdownClass);
+  dropdown.classList.toggle("show");
+}
 
 
 function closeDropdowns() {
