@@ -11,7 +11,10 @@ Users should be able to:
 
 ## Screenshots
 
-![alt text](screenshots/desktop.png "blogr landing page desktop layout")
+![alt text](screenshots/desktop1.png "blogr landing page desktop layout")
+![alt text](screenshots/desktop2.png "blogr landing page desktop layout")
+![alt text](screenshots/desktop3.png "blogr landing page desktop layout")
+![alt text](screenshots/desktop4.png "blogr landing page desktop layout")
 
 ## Links
 
