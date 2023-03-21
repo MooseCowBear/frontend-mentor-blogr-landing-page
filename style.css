@@ -274,11 +274,10 @@ main {
 }
 
 .three {
-  margin: 5rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5em;
-  padding: var(--padding);
+  padding: calc(2* var(--padding)) var(--padding);
   background-image: url('./images/illustration-laptop-desktop.svg');
   background-repeat: no-repeat;
   background-size: 70%;
